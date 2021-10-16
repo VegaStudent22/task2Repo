@@ -157,6 +157,7 @@ namespace PoE_GADE6112
             this.minWidth.Name = "minWidth";
             this.minWidth.Size = new System.Drawing.Size(125, 27);
             this.minWidth.TabIndex = 12;
+            this.minWidth.TextChanged += new System.EventHandler(this.minWidth_TextChanged);
             // 
             // maxWidth
             // 

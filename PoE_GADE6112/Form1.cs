@@ -110,6 +110,11 @@ namespace PoE_GADE6112
 
             }
         }
+
+        private void minWidth_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

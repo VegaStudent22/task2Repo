@@ -84,6 +84,9 @@ namespace PoE_GADE6112
             else if (move == Movement.RIGHT)
             {
                 X = X + 1;
+            }else if(move == Movement.NOMOVEMENT)
+            {
+                // X and Y remains as they are
             }
         }
 
