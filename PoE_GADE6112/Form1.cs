@@ -17,12 +17,12 @@ namespace PoE_GADE6112
         private const int V1 = 0;
         private Random random = new Random();
         public Random Random { get { return this.random; } set { random = value; } }
-        Map _map = new Map(0, 20, 0, 20, 4);
+        Map _map = new Map(0, 20, 0, 20, 4, 6);
         Hero hero;
         public Form1()
         {
             InitializeComponent();
-            hero = new Hero((_map.Width / 2), (_map.Height / 2), 10, 10);
+            hero = new Hero((_map.Width / 2), (_map.Height / 2), 10, 10, 0);
             _map.Hero = hero;
         }
 
@@ -68,16 +68,16 @@ namespace PoE_GADE6112
 
         public override string ToString()
         {
-            int j = hero.heroXPosition;
-            int k = hero.heroYPosition; 
+            int i = hero.heroXPosition;
+            int j = hero.heroYPosition; 
 
             //updates the map where the hero will show
             string grid = string.Empty;
-            for (int j = 0; j < _map.Width; j++)
+            for (int x = 0; x < _map.Width; x++)
             {
-                for (int k = 0; k < _map.Height; k++)
+                for (int y = 0; y < _map.Height; y++)
                 {
-                    grid += _map.Tile[j, k];
+                    grid += _map.Tile[x, y];
                 }
                 grid += "\n";
             }
@@ -93,7 +93,7 @@ namespace PoE_GADE6112
             {
                 for (int j = 0; j < _map.Height; j++)
                 {
-                    if (_map.Tile.X == hero.heroXPosition && _map.Tile.Y == hero.heroYPosition)
+                    if (_map.Tile[i,j].X == hero.heroXPosition && _map.Tile[x,y].Y == hero.heroYPosition)
                     {
                         {
                             x = i;
@@ -103,15 +103,20 @@ namespace PoE_GADE6112
                 }
 
                 //update vision character 
-                hero.VisionArr[0] = Tile[x, y + 1];//up
-                hero.VisionArr[1] = Tile[x + 1, y];//right
-                hero.VisionArr[2] = Tile[x, y - 1];//down
-                hero.VisionArr[3] = Tile[x - 1, y];//left
+                hero.VisionArr[0] = _map.Tile[x, y + 1];//up
+                hero.VisionArr[1] = _map.Tile[x + 1, y];//right
+                hero.VisionArr[2] = _map.Tile[x, y - 1];//down
+                hero.VisionArr[3] = _map.Tile[x - 1, y];//left
 
             }
         }
 
         private void minWidth_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
         {
 
         }

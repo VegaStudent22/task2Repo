@@ -10,13 +10,15 @@ namespace PoE_GADE6112
         public int heroYPosition;
         public int heroHP;
         public new int maxHP;
+        public int goldAmount;
 
-        public Hero(int heroXPosition, int heroYPosition, int heroHP, int maxHP) : base(heroXPosition, heroYPosition, TileType.HERO, 2, heroHP, maxHP)
+        public Hero(int heroXPosition, int heroYPosition, int heroHP, int maxHP, int goldAmount) : base(heroXPosition, heroYPosition, TileType.HERO, 2, heroHP, maxHP)
         {
             this.heroXPosition = heroXPosition;
             this.heroYPosition = heroYPosition;
             this.heroHP = heroHP;
             this.maxHP = maxHP;
+            this.goldAmount = goldAmount;
         }
 
         public override Movement ReturnMove(Movement move)
@@ -39,7 +41,7 @@ namespace PoE_GADE6112
 
         public override string ToString()
         {
-            string Hero = "Player Stats:" + "\n HP" + HP + "/ " + MaxHP + "\n Damage: " + Damage + "\n [" + X + "," + Y + "]";
+            string Hero = "Player Stats:" + "\n HP" + HP + "/ " + MaxHP + "\n Gold: " + "\n " + goldAmount + "\n Damage: " + Damage + "\n [" + X + "," + Y + "]";
 
             return Hero;
         }

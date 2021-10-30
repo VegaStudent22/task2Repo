@@ -12,6 +12,9 @@ namespace PoE_GADE6112
         public int MaxHP { get { return this.maxHP; } set { maxHP = value; } }
         protected int damage { get; set; }
         public int Damage { get { return this.damage; } set { damage = value; } }
+        private int goldPurse;
+        public int GoldPurse { get { return this.goldPurse; } set { goldPurse = value; } }
+
 
         public Tile[] VisionArr { get; set; } = new Tile[4]; //index 0 up, 1 right, 2 down, 3 left; used to check valid movement
         public enum Movement
@@ -84,16 +87,22 @@ namespace PoE_GADE6112
             else if (move == Movement.RIGHT)
             {
                 X = X + 1;
-            }else if(move == Movement.NOMOVEMENT)
+            }
+            else if(move == Movement.NOMOVEMENT)
             {
                 // X and Y remains as they are
             }
         }
 
         public abstract Movement ReturnMove(Movement move = Movement.NOMOVEMENT);
-
-
         public abstract override String ToString();
+        public void Pickup(Item i)
+        {
+            if (i.tileType == TileType.GOLD)//go ask your teacher
+            {
+                //goldPurse += i.GoldAmount;
+            }
+        }
     }
 }
 

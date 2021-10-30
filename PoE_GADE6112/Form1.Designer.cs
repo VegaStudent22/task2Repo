@@ -43,6 +43,7 @@ namespace PoE_GADE6112
             this.maxWidth = new System.Windows.Forms.TextBox();
             this.minHeight = new System.Windows.Forms.TextBox();
             this.maxHeight = new System.Windows.Forms.TextBox();
+            this.Save = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -180,11 +181,22 @@ namespace PoE_GADE6112
             this.maxHeight.Size = new System.Drawing.Size(125, 27);
             this.maxHeight.TabIndex = 15;
             // 
+            // Save
+            // 
+            this.Save.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Save.Location = new System.Drawing.Point(428, 627);
+            this.Save.Name = "Save";
+            this.Save.Size = new System.Drawing.Size(137, 31);
+            this.Save.TabIndex = 16;
+            this.Save.Text = "Save";
+            this.Save.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1569, 724);
+            this.Controls.Add(this.Save);
             this.Controls.Add(this.maxHeight);
             this.Controls.Add(this.minHeight);
             this.Controls.Add(this.maxWidth);
@@ -219,6 +231,7 @@ namespace PoE_GADE6112
         private System.Windows.Forms.TextBox maxWidth;
         private System.Windows.Forms.TextBox minHeight;
         private System.Windows.Forms.TextBox maxHeight;
+        private System.Windows.Forms.Button Save;
     }
 }
 

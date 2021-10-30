@@ -56,7 +56,7 @@ namespace PoE_GADE6112
             switch (tileType)
             {
                 case TileType.HERO:
-                    Hero hero = new Hero(x, y, 10, 10);//is the HP 10 ok?
+                    Hero hero = new Hero(x, y, 10, 10, 0);
                     return hero;
                 case TileType.ENEMY:
                     //Integration Question 3 Task 2
@@ -99,6 +99,21 @@ namespace PoE_GADE6112
             Hero.VisionArr[1] = Tile[x + 1, y];//right
             Hero.VisionArr[2] = Tile[x, y - 1];//down
             Hero.VisionArr[3] = Tile[x - 1, y];//left
-        }        
+        }
+        
+        public Item GetItemAtPosition(int x, int y)
+        {
+            var t = Tile[x, y];
+            for (int i = 0; i < ItemArr.Length; i++)
+            {
+                if(ItemArr[i] == t)
+                {
+                    var result = ItemArr[i];
+                    ItemArr[i] = null;
+                    return result;
+                }
+            }
+            return null;
+        }
     }
 }

@@ -17,15 +17,11 @@ namespace PoE_GADE6112
         }
 
         public TileType tileType { get; set; }
-
-
         public Tile(int x, int y, TileType tileType)
         {
             this.X = x;
             this.Y = y;
             this.tileType = tileType;
         }
-
-
     }
 }

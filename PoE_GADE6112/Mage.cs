@@ -6,7 +6,7 @@ namespace PoE_GADE6112
 {
     public class Mage : Enemy
     {
-        public Mage(int x, int y): base(x,y,5,5,10,TileType.ENEMY)//find out what is the ma HP for enemy
+        public Mage(int x, int y): base(x,y,5,5,10,TileType.ENEMY)
         {
 
         }
@@ -17,6 +17,7 @@ namespace PoE_GADE6112
 
         public override bool CheckRange(Character target)
         {
+            int armReach = 1;
             return base.CheckRange(target);// not sure if correct?
         }
     }
