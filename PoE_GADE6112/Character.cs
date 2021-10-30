@@ -98,7 +98,7 @@ namespace PoE_GADE6112
         public abstract override String ToString();
         public void Pickup(Item i)
         {
-            if (i.tileType == TileType.GOLD)//go ask your teacher
+            if (i.tileType == TileType.GOLD)//go ask if implementation is correct
             {
                 //goldPurse += i.GoldAmount;
             }

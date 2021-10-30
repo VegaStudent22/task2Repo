@@ -41,7 +41,7 @@ namespace PoE_GADE6112
 
         public override string ToString()
         {
-            string Hero = "Player Stats:" + "\n HP" + HP + "/ " + MaxHP + "\n Gold: " + "\n " + goldAmount + "\n Damage: " + Damage + "\n [" + X + "," + Y + "]";
+            string Hero = "Player Stats:" + "\n HP: " + HP + "/ " + MaxHP + "\n Gold: " + "\n " + goldAmount + "\n Damage: " + Damage + "\n [" + X + "," + Y + "]";
 
             return Hero;
         }

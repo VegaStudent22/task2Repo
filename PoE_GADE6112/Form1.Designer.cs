@@ -38,12 +38,12 @@ namespace PoE_GADE6112
             this.richTextBox2 = new System.Windows.Forms.RichTextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.richTextBox3 = new System.Windows.Forms.RichTextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.minWidth = new System.Windows.Forms.TextBox();
             this.maxWidth = new System.Windows.Forms.TextBox();
             this.minHeight = new System.Windows.Forms.TextBox();
             this.maxHeight = new System.Windows.Forms.TextBox();
             this.Save = new System.Windows.Forms.Button();
+            this.createMap = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -109,6 +109,7 @@ namespace PoE_GADE6112
             this.Attack.TabIndex = 5;
             this.Attack.Text = "Attack";
             this.Attack.UseVisualStyleBackColor = true;
+            this.Attack.Click += new System.EventHandler(this.Attack_Click);
             // 
             // richTextBox2
             // 
@@ -122,7 +123,6 @@ namespace PoE_GADE6112
             // panel2
             // 
             this.panel2.Controls.Add(this.richTextBox3);
-            this.panel2.Controls.Add(this.comboBox1);
             this.panel2.Controls.Add(this.richTextBox2);
             this.panel2.Controls.Add(this.Attack);
             this.panel2.Location = new System.Drawing.Point(1137, 70);
@@ -133,24 +133,11 @@ namespace PoE_GADE6112
             // richTextBox3
             // 
             this.richTextBox3.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.richTextBox3.Location = new System.Drawing.Point(15, 48);
+            this.richTextBox3.Location = new System.Drawing.Point(15, 10);
             this.richTextBox3.Name = "richTextBox3";
-            this.richTextBox3.Size = new System.Drawing.Size(303, 148);
+            this.richTextBox3.Size = new System.Drawing.Size(303, 186);
             this.richTextBox3.TabIndex = 12;
             this.richTextBox3.Text = "";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Goblin [X, Y] 10 HP (10)",
-            "",
-            "Hero [X, Y] 10 HP (10)"});
-            this.comboBox1.Location = new System.Drawing.Point(15, 14);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(303, 23);
-            this.comboBox1.TabIndex = 0;
             // 
             // minWidth
             // 
@@ -166,6 +153,7 @@ namespace PoE_GADE6112
             this.maxWidth.Name = "maxWidth";
             this.maxWidth.Size = new System.Drawing.Size(125, 27);
             this.maxWidth.TabIndex = 13;
+            this.maxWidth.TextChanged += new System.EventHandler(this.maxWidth_TextChanged);
             // 
             // minHeight
             // 
@@ -173,6 +161,7 @@ namespace PoE_GADE6112
             this.minHeight.Name = "minHeight";
             this.minHeight.Size = new System.Drawing.Size(125, 27);
             this.minHeight.TabIndex = 14;
+            this.minHeight.TextChanged += new System.EventHandler(this.minHeight_TextChanged);
             // 
             // maxHeight
             // 
@@ -180,6 +169,7 @@ namespace PoE_GADE6112
             this.maxHeight.Name = "maxHeight";
             this.maxHeight.Size = new System.Drawing.Size(125, 27);
             this.maxHeight.TabIndex = 15;
+            this.maxHeight.TextChanged += new System.EventHandler(this.maxHeight_TextChanged);
             // 
             // Save
             // 
@@ -190,12 +180,24 @@ namespace PoE_GADE6112
             this.Save.TabIndex = 16;
             this.Save.Text = "Save";
             this.Save.UseVisualStyleBackColor = true;
+            this.Save.Click += new System.EventHandler(this.Save_Click);
+            // 
+            // createMap
+            // 
+            this.createMap.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.createMap.Location = new System.Drawing.Point(848, 364);
+            this.createMap.Name = "createMap";
+            this.createMap.Size = new System.Drawing.Size(125, 36);
+            this.createMap.TabIndex = 17;
+            this.createMap.Text = "Enter Map";
+            this.createMap.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1569, 724);
+            this.Controls.Add(this.createMap);
             this.Controls.Add(this.Save);
             this.Controls.Add(this.maxHeight);
             this.Controls.Add(this.minHeight);
@@ -225,13 +227,13 @@ namespace PoE_GADE6112
         private System.Windows.Forms.Button Attack;
         private System.Windows.Forms.RichTextBox richTextBox2;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.RichTextBox richTextBox3;
         private System.Windows.Forms.TextBox minWidth;
         private System.Windows.Forms.TextBox maxWidth;
         private System.Windows.Forms.TextBox minHeight;
         private System.Windows.Forms.TextBox maxHeight;
         private System.Windows.Forms.Button Save;
+        private System.Windows.Forms.Button createMap;
     }
 }
 

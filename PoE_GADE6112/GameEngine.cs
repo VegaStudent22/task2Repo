@@ -16,7 +16,7 @@ namespace PoE_GADE6112
 
         public GameEngine()
         {
-            map = new Map(0, 10, 0, 10, 3, 5);//to check if values are fine like this?
+            map = new Map(5, 10, 5, 10, 3, 5);//to check if values are fine like this?
             fileName = "game.dat";
         }
         public bool MovePlayer(Movement move)
@@ -60,7 +60,7 @@ namespace PoE_GADE6112
             {
                 for (int j = 0; j < Map.Height; j++)
                 {
-                    grid += Map.Tile[i, j];
+                    grid += " | " + Map.Tile[i, j];
                 }
                 grid += "\n";
             }
