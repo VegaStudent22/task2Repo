@@ -28,16 +28,6 @@ namespace PoE_GADE6112
 
         }
 
-        /*public void create_Goblin(int goblinNumber)
-        {
-            for (int i = 0; i < goblinNumber; i++)
-            {
-                int randomX = this.random.Next(0, _map.Width);
-                int randomY = this.random.Next(0, _map.Height);
-                new Goblin(randomX, randomY);
-            }
-        }*/
-
         private void Up_Click(object sender, EventArgs e)
         {
             var move = gameEngine.Map.Hero.ReturnMove(Movement.UP);//moves hero up
