@@ -18,8 +18,14 @@ namespace PoE_GADE6112
         {
             InitializeComponent();
             gameEngine = new GameEngine();
+            UpdateForm();
+        }
+
+        public void UpdateForm()
+        {
             richTextBox1.Text = gameEngine.ToString();
             lblHeroStat.Text = gameEngine.Map.Hero.ToString();
+
         }
 
         /*public void create_Goblin(int goblinNumber)
@@ -34,22 +40,35 @@ namespace PoE_GADE6112
 
         private void Up_Click(object sender, EventArgs e)
         {
-            gameEngine.Map.Hero.ReturnMove(Movement.UP);//moves hero up
+            var move = gameEngine.Map.Hero.ReturnMove(Movement.UP);//moves hero up
+            gameEngine.Map.Hero.Move(move);
+            //gameEngine.Map.UpdateTile(gameEngine.Map.Hero);
+            gameEngine.Map.UpdateVision();
+            UpdateForm();
         }
 
         private void Down_Click(object sender, EventArgs e)
         {
-            gameEngine.Map.Hero.ReturnMove(Movement.DOWN);//moves hero right
+            var move = gameEngine.Map.Hero.ReturnMove(Movement.DOWN);//moves hero right
+            gameEngine.Map.Hero.Move(move);
+            gameEngine.Map.UpdateVision();
+            UpdateForm();
         }
 
         private void Left_Click(object sender, EventArgs e)
         {
-            gameEngine.Map.Hero.ReturnMove(Movement.LEFT);//moves hero left
+            var move = gameEngine.Map.Hero.ReturnMove(Movement.LEFT);//moves hero left
+            gameEngine.Map.Hero.Move(move);
+            gameEngine.Map.UpdateVision();
+            UpdateForm();
         }
 
         private void Right_Click(object sender, EventArgs e)
         {
-            gameEngine.Map.Hero.ReturnMove(Movement.RIGHT);//moves hero right
+            var move = gameEngine.Map.Hero.ReturnMove(Movement.RIGHT);//moves hero right
+            gameEngine.Map.Hero.Move(move);
+            gameEngine.Map.UpdateVision();
+            UpdateForm();
         }       
 
         private void minWidth_TextChanged(object sender, EventArgs e)

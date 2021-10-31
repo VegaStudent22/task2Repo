@@ -17,7 +17,6 @@ namespace PoE_GADE6112
 
         public override bool CheckRange(Character target)
         {
-            int armReach = 1;
             return base.CheckRange(target);// not sure if correct?
         }
     }

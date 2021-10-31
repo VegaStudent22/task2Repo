@@ -13,7 +13,7 @@ namespace PoE_GADE6112
         static string fileName;
         private Map map;
         public Map Map { get { return this.map; } set { map = value; } }
-        private static readonly string[] symbols = { "H", ".", "G", "O", "W", "$", "M" }; // $: GOLD
+        private static readonly string[] symbols = { "h", ".", "g", "o", "w", "$", "m" }; // $: GOLD
 
         public GameEngine()
         {

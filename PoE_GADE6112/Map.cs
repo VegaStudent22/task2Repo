@@ -33,22 +33,30 @@ namespace PoE_GADE6112
             this.Tile = new Tile[this.Width, this.Height];
             //call create
             var h = Create(TileType.HERO);
-            Tile[h.X, h.Y] = h;
+            UpdateTile(h);
             //loop through enemies
             for (int i=0; i< numberOfEnemies; i++)
             {
                 var enemy = Create(TileType.ENEMY);
-                Tile[enemy.X, enemy.Y] = enemy;
+                UpdateTile(enemy);
             }
 
             //loop through items gold drop
             for (int i = 0; i < goldDrops; i++)
             {
                 var gold = Create(TileType.GOLD);
-                Tile[gold.X, gold.Y] = gold;
+                UpdateTile(gold);
             }
             //call update Vision
             UpdateVision();
+        }
+
+        public void UpdateTile(Tile tile)//own method to help update Tile
+        {
+            //int previousX = tile.X;
+            //int previousY = tile.Y;
+            //var previousTile = Tile[tile.X, tile.Y];
+            Tile[tile.X, tile.Y] = tile;
         }
 
         private Tile Create(TileType tileType)
@@ -98,12 +106,21 @@ namespace PoE_GADE6112
                 }
             }
             //update vision character 
-            Hero.VisionArr[0] = Tile[x, y + 1];//up
-            Hero.VisionArr[1] = Tile[x + 1, y];//right
+            if (y < height - 1)
+            {
+                Hero.VisionArr[0] = Tile[x, y + 1];//up
+            }
+
+            if(x < width - 1)
+            {
+                Hero.VisionArr[1] = Tile[x + 1, y];//right
+            }                
+            
             if (y > 1)
             {
                 Hero.VisionArr[2] = Tile[x, y - 1];//down
             }
+
             if (x > 1)
             {
                 Hero.VisionArr[3] = Tile[x - 1, y];//left

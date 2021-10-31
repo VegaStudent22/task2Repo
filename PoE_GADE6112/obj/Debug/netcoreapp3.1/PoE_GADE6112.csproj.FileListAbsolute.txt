@@ -45,3 +45,4 @@ C:\Users\lukej\Source\Repos\VegaStudent22\task2Repo\PoE_GADE6112\bin\Debug\netco
 C:\Users\lukej\Source\Repos\VegaStudent22\task2Repo\PoE_GADE6112\obj\Debug\netcoreapp3.1\PoE_GADE6112.dll
 C:\Users\lukej\Source\Repos\VegaStudent22\task2Repo\PoE_GADE6112\obj\Debug\netcoreapp3.1\PoE_GADE6112.pdb
 C:\Users\lukej\Source\Repos\VegaStudent22\task2Repo\PoE_GADE6112\obj\Debug\netcoreapp3.1\PoE_GADE6112.genruntimeconfig.cache
+C:\Users\lukej\Source\Repos\VegaStudent22\task2Repo\PoE_GADE6112\obj\Debug\netcoreapp3.1\PoE_GADE6112.csproj.AssemblyReference.cache
