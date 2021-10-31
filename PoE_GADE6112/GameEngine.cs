@@ -13,6 +13,7 @@ namespace PoE_GADE6112
         static string fileName;
         private Map map;
         public Map Map { get { return this.map; } set { map = value; } }
+        private static readonly string[] symbols = { "H", ".", "G", "O", "W", "$", "M" }; // $: GOLD
 
         public GameEngine()
         {
@@ -58,12 +59,61 @@ namespace PoE_GADE6112
             string grid = string.Empty;
             for (int i = 0; i < Map.Width; i++)
             {
+                grid += "X".PadRight(3);
+            }
+            grid += "\n";
+            
+            for (int i = 0; i < Map.Width; i++)
+            {
+                grid += "X".PadRight(3);
                 for (int j = 0; j < Map.Height; j++)
                 {
-                    grid += " | " + Map.Tile[i, j];
+                    if (Map.Tile[i, j] != null)
+                    {
+                        
+                        switch (Map.Tile[i, j].tileType)
+                        {
+                            case TileType.HERO:
+                                grid += symbols[0].PadRight(3);
+                                break;
+                            case TileType.EMPTY:
+                                grid += symbols[1].PadRight(3);
+                                break;
+                            case TileType.GOBLIN:
+                                grid += symbols[2].PadRight(3);
+                                break;
+                            case TileType.OBSTACLE:
+                                grid += symbols[3].PadRight(3);
+                                break;
+                            case TileType.WEAPON:
+                                grid += symbols[4].PadRight(3);
+                                break;
+                            case TileType.GOLD:
+                                grid += symbols[5].PadRight(3);
+                                break;
+                            case TileType.MAGE:
+                                grid += symbols[6].PadRight(3);
+                                break;
+                            default:
+                                grid += symbols[1].PadRight(3);
+                                break;
+                        }
+                    }
+                    else
+                    {
+                        grid += symbols[1].PadRight(3);//empty if null
+                    }
+                    
+                    //grid += " | " + Map.Tile[i, j];
                 }
-                grid += "\n";
+                grid += "X".PadLeft(3) + "\n";
             }
+
+            for (int i = 0; i < Map.Width; i++)
+            {
+                grid += "X".PadRight(3);
+            }
+            grid += "\n";
             return grid;
         }
 

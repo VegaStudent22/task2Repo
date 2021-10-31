@@ -19,6 +19,7 @@ namespace PoE_GADE6112
             InitializeComponent();
             gameEngine = new GameEngine();
             richTextBox1.Text = gameEngine.ToString();
+            lblHeroStat.Text = gameEngine.Map.Hero.ToString();
         }
 
         /*public void create_Goblin(int goblinNumber)
@@ -49,12 +50,7 @@ namespace PoE_GADE6112
         private void Right_Click(object sender, EventArgs e)
         {
             gameEngine.Map.Hero.ReturnMove(Movement.RIGHT);//moves hero right
-        }
-
-        private void richTextBox1_TextChanged(object sender, EventArgs e)
-        {
-            richTextBox1.Text = gameEngine.Map.ToString();
-        }        
+        }       
 
         private void minWidth_TextChanged(object sender, EventArgs e)
         {

@@ -13,7 +13,7 @@ namespace PoE_GADE6112
 
         public enum TileType
         {
-            HERO, ENEMY, GOBLIN, WEAPON, OBSTACLE, EMPTY, GOLD
+            HERO, ENEMY, GOBLIN, WEAPON, OBSTACLE, EMPTY, GOLD, MAGE
         }
 
         public TileType tileType { get; set; }

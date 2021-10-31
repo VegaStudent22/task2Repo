@@ -33,7 +33,5 @@ namespace PoE_GADE6112
             }
             return Movement.NOMOVEMENT;
         }
-
-    } 
-            
+    }            
 }

@@ -44,6 +44,7 @@ namespace PoE_GADE6112
             this.maxHeight = new System.Windows.Forms.TextBox();
             this.Save = new System.Windows.Forms.Button();
             this.createMap = new System.Windows.Forms.Button();
+            this.lblHeroStat = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,7 +55,7 @@ namespace PoE_GADE6112
             this.richTextBox1.Size = new System.Drawing.Size(541, 527);
             this.richTextBox1.TabIndex = 0;
             this.richTextBox1.Text = "";
-            this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
+            //this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
             // 
             // Up
             // 
@@ -192,11 +193,22 @@ namespace PoE_GADE6112
             this.createMap.Text = "Enter Map";
             this.createMap.UseVisualStyleBackColor = true;
             // 
+            // lblHeroStat
+            // 
+            this.lblHeroStat.AutoSize = true;
+            this.lblHeroStat.Location = new System.Drawing.Point(848, 487);
+            this.lblHeroStat.Name = "lblHeroStat";
+            this.lblHeroStat.Size = new System.Drawing.Size(76, 20);
+            this.lblHeroStat.TabIndex = 18;
+            this.lblHeroStat.Text = "Hero stats";
+            //this.lblHeroStat.Click += new System.EventHandler(this.lblHeroStat_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1569, 724);
+            this.Controls.Add(this.lblHeroStat);
             this.Controls.Add(this.createMap);
             this.Controls.Add(this.Save);
             this.Controls.Add(this.maxHeight);
@@ -234,6 +246,7 @@ namespace PoE_GADE6112
         private System.Windows.Forms.TextBox maxHeight;
         private System.Windows.Forms.Button Save;
         private System.Windows.Forms.Button createMap;
+        private System.Windows.Forms.Label lblHeroStat;
     }
 }
 

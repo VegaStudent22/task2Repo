@@ -32,17 +32,20 @@ namespace PoE_GADE6112
             this.ItemArr = new Item[goldDrops];
             this.Tile = new Tile[this.Width, this.Height];
             //call create
-            Create(TileType.HERO);
+            var h = Create(TileType.HERO);
+            Tile[h.X, h.Y] = h;
             //loop through enemies
             for (int i=0; i< numberOfEnemies; i++)
             {
-                Create(TileType.ENEMY);
+                var enemy = Create(TileType.ENEMY);
+                Tile[enemy.X, enemy.Y] = enemy;
             }
 
             //loop through items gold drop
             for (int i = 0; i < goldDrops; i++)
             {
-                Create(TileType.GOLD);
+                var gold = Create(TileType.GOLD);
+                Tile[gold.X, gold.Y] = gold;
             }
             //call update Vision
             UpdateVision();
