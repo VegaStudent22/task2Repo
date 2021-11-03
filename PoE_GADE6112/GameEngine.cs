@@ -17,7 +17,7 @@ namespace PoE_GADE6112
 
         public GameEngine()
         {
-            map = new Map(5, 10, 5, 10, 3, 5);//to check if values are fine like this?
+            map = new Map(5, 10, 5, 10, 3, 5);
             fileName = "game.dat";
         }
         public bool MovePlayer(Movement move)
@@ -104,7 +104,7 @@ namespace PoE_GADE6112
                         grid += symbols[1].PadRight(3);//empty if null
                     }
                     
-                    //grid += " | " + Map.Tile[i, j];
+                    grid += " | " + Map.Tile[i, j];
                 }
                 grid += "X".PadLeft(3) + "\n";
             }
@@ -121,7 +121,7 @@ namespace PoE_GADE6112
         {
             for(int i = 0; i < Map.EnemyArr.Length; i++)
             {
-                Map.EnemyArr[i].Attack(c);//ask if implementation is correct Question 3.3
+                Map.EnemyArr[i].Attack(c);
                 Map.UpdateVision();
             }
         }
@@ -130,7 +130,7 @@ namespace PoE_GADE6112
         {
             for (int i = 0; i < Map.EnemyArr.Length; i++)
             {
-                //not sure, ask if implementation is correct Q3.3
+                
                 Map.EnemyArr[i].Attack(c);
                 Map.UpdateVision();
             }

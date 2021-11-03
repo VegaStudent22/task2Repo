@@ -38,29 +38,23 @@ namespace PoE_GADE6112
             this.richTextBox2 = new System.Windows.Forms.RichTextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.richTextBox3 = new System.Windows.Forms.RichTextBox();
-            this.minWidth = new System.Windows.Forms.TextBox();
-            this.maxWidth = new System.Windows.Forms.TextBox();
-            this.minHeight = new System.Windows.Forms.TextBox();
-            this.maxHeight = new System.Windows.Forms.TextBox();
             this.Save = new System.Windows.Forms.Button();
-            this.createMap = new System.Windows.Forms.Button();
             this.lblHeroStat = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(232, 70);
+            this.richTextBox1.Location = new System.Drawing.Point(12, 12);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(541, 527);
             this.richTextBox1.TabIndex = 0;
             this.richTextBox1.Text = "";
-            //this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
             // 
             // Up
             // 
             this.Up.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Up.Location = new System.Drawing.Point(1280, 469);
+            this.Up.Location = new System.Drawing.Point(880, 409);
             this.Up.Name = "Up";
             this.Up.Size = new System.Drawing.Size(46, 38);
             this.Up.TabIndex = 1;
@@ -71,7 +65,7 @@ namespace PoE_GADE6112
             // Down
             // 
             this.Down.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Down.Location = new System.Drawing.Point(1280, 576);
+            this.Down.Location = new System.Drawing.Point(880, 516);
             this.Down.Name = "Down";
             this.Down.Size = new System.Drawing.Size(46, 38);
             this.Down.TabIndex = 2;
@@ -82,7 +76,7 @@ namespace PoE_GADE6112
             // Left
             // 
             this.Left.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Left.Location = new System.Drawing.Point(1188, 522);
+            this.Left.Location = new System.Drawing.Point(788, 462);
             this.Left.Name = "Left";
             this.Left.Size = new System.Drawing.Size(46, 38);
             this.Left.TabIndex = 3;
@@ -93,7 +87,7 @@ namespace PoE_GADE6112
             // Right
             // 
             this.Right.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Right.Location = new System.Drawing.Point(1363, 522);
+            this.Right.Location = new System.Drawing.Point(963, 462);
             this.Right.Name = "Right";
             this.Right.Size = new System.Drawing.Size(46, 38);
             this.Right.TabIndex = 4;
@@ -126,7 +120,7 @@ namespace PoE_GADE6112
             this.panel2.Controls.Add(this.richTextBox3);
             this.panel2.Controls.Add(this.richTextBox2);
             this.panel2.Controls.Add(this.Attack);
-            this.panel2.Location = new System.Drawing.Point(1137, 70);
+            this.panel2.Location = new System.Drawing.Point(737, 10);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(331, 379);
             this.panel2.TabIndex = 11;
@@ -140,42 +134,10 @@ namespace PoE_GADE6112
             this.richTextBox3.TabIndex = 12;
             this.richTextBox3.Text = "";
             // 
-            // minWidth
-            // 
-            this.minWidth.Location = new System.Drawing.Point(848, 80);
-            this.minWidth.Name = "minWidth";
-            this.minWidth.Size = new System.Drawing.Size(125, 27);
-            this.minWidth.TabIndex = 12;
-            this.minWidth.TextChanged += new System.EventHandler(this.minWidth_TextChanged);
-            // 
-            // maxWidth
-            // 
-            this.maxWidth.Location = new System.Drawing.Point(848, 151);
-            this.maxWidth.Name = "maxWidth";
-            this.maxWidth.Size = new System.Drawing.Size(125, 27);
-            this.maxWidth.TabIndex = 13;
-            this.maxWidth.TextChanged += new System.EventHandler(this.maxWidth_TextChanged);
-            // 
-            // minHeight
-            // 
-            this.minHeight.Location = new System.Drawing.Point(848, 221);
-            this.minHeight.Name = "minHeight";
-            this.minHeight.Size = new System.Drawing.Size(125, 27);
-            this.minHeight.TabIndex = 14;
-            this.minHeight.TextChanged += new System.EventHandler(this.minHeight_TextChanged);
-            // 
-            // maxHeight
-            // 
-            this.maxHeight.Location = new System.Drawing.Point(848, 298);
-            this.maxHeight.Name = "maxHeight";
-            this.maxHeight.Size = new System.Drawing.Size(125, 27);
-            this.maxHeight.TabIndex = 15;
-            this.maxHeight.TextChanged += new System.EventHandler(this.maxHeight_TextChanged);
-            // 
             // Save
             // 
             this.Save.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Save.Location = new System.Drawing.Point(428, 627);
+            this.Save.Location = new System.Drawing.Point(208, 569);
             this.Save.Name = "Save";
             this.Save.Size = new System.Drawing.Size(137, 31);
             this.Save.TabIndex = 16;
@@ -183,38 +145,22 @@ namespace PoE_GADE6112
             this.Save.UseVisualStyleBackColor = true;
             this.Save.Click += new System.EventHandler(this.Save_Click);
             // 
-            // createMap
-            // 
-            this.createMap.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.createMap.Location = new System.Drawing.Point(848, 364);
-            this.createMap.Name = "createMap";
-            this.createMap.Size = new System.Drawing.Size(125, 36);
-            this.createMap.TabIndex = 17;
-            this.createMap.Text = "Enter Map";
-            this.createMap.UseVisualStyleBackColor = true;
-            // 
             // lblHeroStat
             // 
             this.lblHeroStat.AutoSize = true;
-            this.lblHeroStat.Location = new System.Drawing.Point(848, 487);
+            this.lblHeroStat.Location = new System.Drawing.Point(628, 429);
             this.lblHeroStat.Name = "lblHeroStat";
             this.lblHeroStat.Size = new System.Drawing.Size(76, 20);
             this.lblHeroStat.TabIndex = 18;
             this.lblHeroStat.Text = "Hero stats";
-            //this.lblHeroStat.Click += new System.EventHandler(this.lblHeroStat_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1569, 724);
+            this.ClientSize = new System.Drawing.Size(1088, 724);
             this.Controls.Add(this.lblHeroStat);
-            this.Controls.Add(this.createMap);
             this.Controls.Add(this.Save);
-            this.Controls.Add(this.maxHeight);
-            this.Controls.Add(this.minHeight);
-            this.Controls.Add(this.maxWidth);
-            this.Controls.Add(this.minWidth);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.Right);
             this.Controls.Add(this.Left);
@@ -240,12 +186,7 @@ namespace PoE_GADE6112
         private System.Windows.Forms.RichTextBox richTextBox2;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.RichTextBox richTextBox3;
-        private System.Windows.Forms.TextBox minWidth;
-        private System.Windows.Forms.TextBox maxWidth;
-        private System.Windows.Forms.TextBox minHeight;
-        private System.Windows.Forms.TextBox maxHeight;
         private System.Windows.Forms.Button Save;
-        private System.Windows.Forms.Button createMap;
         private System.Windows.Forms.Label lblHeroStat;
     }
 }

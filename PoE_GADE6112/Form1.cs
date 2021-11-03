@@ -60,16 +60,7 @@ namespace PoE_GADE6112
             gameEngine.Map.UpdateVision();
             UpdateForm();
         }       
-
-        private void minWidth_TextChanged(object sender, EventArgs e)
-        {
-            //confirm if this implementation is correct
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void Save_Click(object sender, EventArgs e)
         {
@@ -78,24 +69,13 @@ namespace PoE_GADE6112
 
         private void Attack_Click(object sender, EventArgs e)
         {
+            var attack = gameEngine.Map.Hero.Attack;
+
             //gameEngine.EnemyAttacks();
             //gameEngine.Map.Hero.Attack();
         }
 
-        private void maxWidth_TextChanged(object sender, EventArgs e)
-        {
-            //confirm if this implementation is correct
-        }
-
-        private void minHeight_TextChanged(object sender, EventArgs e)
-        {
-            //confirm if this implementation is correct
-        }
-
-        private void maxHeight_TextChanged(object sender, EventArgs e)
-        {
-            //confirm if this implementation is correct
-        }
+        
     }
 }
 
