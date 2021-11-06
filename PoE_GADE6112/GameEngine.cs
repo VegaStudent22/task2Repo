@@ -48,9 +48,12 @@ namespace PoE_GADE6112
                 //Question 3.2 -> 2.
                 //the hero position is already updated
                 var item = Map.GetItemAtPosition(Map.Hero.X, Map.Hero.Y);//get item at its position
-                Map.Hero.Pickup(item);//pickup item
+                if(item != null)
+                {
+                    Map.Hero.Pickup(item);//pickup item
+                }                
             }
-            return isValid;         
+            return isValid;        
 
         }
 
@@ -69,8 +72,7 @@ namespace PoE_GADE6112
                 for (int j = 0; j < Map.Height; j++)
                 {
                     if (Map.Tile[i, j] != null)
-                    {
-                        
+                    {                        
                         switch (Map.Tile[i, j].tileType)
                         {
                             case TileType.HERO:
@@ -104,7 +106,7 @@ namespace PoE_GADE6112
                         grid += symbols[1].PadRight(3);//empty if null
                     }
                     
-                    grid += " | " + Map.Tile[i, j];
+                    //grid += " | " + Map.Tile[i, j];
                 }
                 grid += "X".PadLeft(3) + "\n";
             }

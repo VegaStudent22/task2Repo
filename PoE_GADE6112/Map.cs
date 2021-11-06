@@ -31,6 +31,7 @@ namespace PoE_GADE6112
             this.EnemyArr = new Enemy[numberOfEnemies];
             this.ItemArr = new Item[goldDrops];
             this.Tile = new Tile[this.Width, this.Height];
+            Console.WriteLine("=======\nwidth: "+ this.width + "\n========\nheight: "+ this.height);
             //call create
             var h = Create(TileType.HERO);
             UpdateTile(h);
@@ -63,7 +64,7 @@ namespace PoE_GADE6112
         {
             int x = this.Random.Next(0, Width);
             int y = this.Random.Next(0, Height);
-
+            Console.WriteLine("=======\nH.X: " + x + "\n========\nH.Y: " + y);
             switch (tileType)
             {
                 case TileType.HERO:

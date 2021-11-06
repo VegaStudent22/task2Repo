@@ -8,10 +8,10 @@ namespace PoE_GADE6112
     {
         protected Random randomNumber = new Random();
 
-        //to check implementation
         public Enemy(int enemyXPosition, int enemyYPosition, int enemyDamage, int enemyStartingHP, int enemyMaxHP, TileType enemySymbol) :
             base(enemyXPosition, enemyYPosition, enemySymbol, enemyDamage, enemyStartingHP, enemyMaxHP)
         {
+            //includes the details of an enemy
         }
         public override string ToString()
         {
