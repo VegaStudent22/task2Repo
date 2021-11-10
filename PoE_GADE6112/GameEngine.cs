@@ -119,16 +119,22 @@ namespace PoE_GADE6112
             return grid;
         }
 
-        public void EnemyAttacks(Character c)
+        public void EnemyAttacks(Character c, Enemy g) //g: Goblin
         {
             for(int i = 0; i < Map.EnemyArr.Length; i++)
             {
                 Map.EnemyArr[i].Attack(c);
                 Map.UpdateVision();
             }
+
+            for (int j = 0; j < Map.EnemyArr.Length; j++) //map updates after goblin moves
+            {
+                Map.EnemyArr[j].Attack(c);
+                Map.UpdateVision();
+            }
         }
 
-        public void MoveEnemies(Character c)
+        public void MoveEnemies(Character c) 
         {
             for (int i = 0; i < Map.EnemyArr.Length; i++)
             {
