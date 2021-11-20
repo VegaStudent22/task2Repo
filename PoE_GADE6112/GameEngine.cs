@@ -141,6 +141,7 @@ namespace PoE_GADE6112
                 
                 Map.EnemyArr[i].Attack(c);
                 Map.UpdateVision();
+
             }
         }
         
